@@ -1,0 +1,261 @@
+*{
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+@font-face {
+  font-family: 'TitleFont';
+  src: url('./assets/fonts/TitleFont.otf');
+}
+
+body, html{
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+
+header{
+
+    width: 100%;
+    transition: 2.2s cubic-bezier(0.19, 1, 0.22, 1);
+    height: 100%;
+
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    position: relative;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+}
+
+header input{
+
+    width: 40%;
+    height: 50px;
+    padding-left: 15px;
+
+    outline: none;
+    margin-top: 20px;
+    border: 0;
+}
+
+header h1{
+
+    font-family: 'TitleFont';
+    border-bottom: 2px solid rgb(79, 76, 74);
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 5rem;
+    color: rgb(79, 76, 74);
+}
+
+header > .start-container{
+
+    width: 80%;
+    height: 90%;
+    margin-bottom: 10px;
+
+    justify-content: space-around;
+}
+
+.display-flex{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-direction{
+
+    flex-direction: column;
+}
+
+.card{
+
+    width: 300px;
+    min-width: 300px;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+
+    border-radius: 5px;
+    border: 7px solid rgb(255, 255, 255);
+    height: 70%;
+}
+
+.hard{
+
+    background: linear-gradient(45deg, rgb(3, 167, 63), rgb(92, 240, 146));
+    transform: rotate(-6deg);
+    margin-right: -18px;
+}
+
+.hard .hard-card{
+
+    background-color: white;
+    padding: 28px;
+
+    width: 110px;
+    height: 110px;
+
+    border: 5px solid white;
+    box-shadow: inset 0px 0px 0px 2px rgb(3, 167, 63);
+}
+
+.easy{
+
+    background: linear-gradient(45deg, rgb(146, 226, 237), rgb(125, 185, 213));
+    transform: rotate(4deg);
+    margin-left: -18px;
+}
+
+.easy .easy-card{
+
+    background-color: white;
+    padding: 28px;
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+
+    border: 5px solid white;
+    box-shadow: inset 0px 0px 0px 2px rgb(78, 178, 191);
+}
+
+.easy .easy-card > p, .hard .hard-card > p{
+
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+.hard .hard-card > p{
+
+    color: rgb(3, 167, 63);
+}
+
+.easy .easy-card > p{
+
+    color: rgb(78, 178, 191);
+}
+
+.hard:hover{
+
+    transform: rotate(5deg) scale(1.05);
+}
+
+.easy:hover{
+    
+    transform: rotate(-5deg) scale(1.05);
+}
+
+main{
+
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(235, 235, 235);
+}
+
+
+.display-grid_8{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.display-grid_16{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#game-container{
+
+    width: 100%;
+    height: 87%;
+
+    padding-right: 58px;
+}
+
+.card-container{
+
+    margin: 5px auto;
+    position: relative;
+
+    width: 90%;
+}
+
+.info-container{
+
+    width: 100%;
+    height: 70px;
+    background-color: white;
+
+    justify-content: space-around;
+    box-shadow: 4px 0px 12px 8px rgba(0, 0, 0, .4);
+}
+
+.info-container .game-info{
+
+    height: 100%;
+    width: 260px;
+}
+
+.info-container .game-info > p{
+
+    margin-left: 15px;
+}
+
+.info-container .game-info > span{
+
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.back-card{
+
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 85px 60px;
+
+    z-index: 6;
+
+    cursor: pointer;
+    border-radius: 5px;
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background: rgb(21, 21, 21);
+}
+
+.card-container > img{
+
+    height: 30px;
+    width: 30px;
+
+    object-fit: cover;
+    z-index: 2;
+    margin-left: -85px;
+}
+
+.disabled{
+
+    pointer-events: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Of Memory</title>
+  </head>
+  <body>
+    <header id='initPage' class="display-flex column-direction">
+      <h1>Game of Memory</h1>
+      <input placeholder="Player Name" id="playernameinp"/>
+        <div class="start-container display-flex">
+          <div data-level="Hard" class="card display-flex hard">
+            <div class="hard-card display-flex">
+              <p>Hard</p>
+            </div>
+          </div>
+          <div data-level="Easy" class="card display-flex easy">
+            <div class="easy-card display-flex">
+              <p>Easy</p>
+            </div>
+          </div>
+        </div>
+    </header>
+    <main>
+      <section class="info-container display-flex">
+        <div class="game-info display-flex">
+          <span>PlayerName:</span>
+          <p id="playername">Tanjin</p>
+        </div>
+        <div class="game-info display-flex">
+          <span>Moves:</span>
+          <p id="moves">00</p>
+        </div>
+        <div class="game-info display-flex">
+          <span>Wins:</span>
+          <p id="wins">00</p>
+        </div>
+      </section>
+      <section id='game-container'>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
